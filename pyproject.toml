@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pi_solvers"
+version = "0.1.0"
+
+[tool.setuptools]
+py-modules = ["pi_solvers"]
+
+[project.scripts]
+evaluate-images = "pi_solvers.evaluate_images:main"
+create-image-sample = "pi_solvers.create_image_sample:main"
+generate-images = "pi_solvers.generate_images:main"
+tolerance-grid-search = "pi_solvers.tolerance_grid_search:main"
+gaussian-testing = "pi_solvers.gaussian_score_testing:main"
+nfe-sweep = "pi_solvers.run_nfe_sampler_sweep:main"
